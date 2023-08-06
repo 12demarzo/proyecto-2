@@ -1,0 +1,425 @@
+
+html {
+    height: 100%;
+    width: 100%;
+    box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      /* Para que el scrolleo en la one page sea suave */
+      scroll-behavior: smooth;
+  }
+  header{
+   
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    height: 90px;
+  background-color:#5013c063 ;
+}
+body{
+  background-color: rgb(177, 146, 189);
+  font-family: "lato", sans-serif;
+  font-size: 18px;
+ 
+}
+
+/* Modo oscuro */
+body.dark {
+background-color: black;
+color: white;
+background-image: url(/img/fondo\ proyecto.jpg);
+}
+
+  
+  h1{
+    color:#ff00ff ;
+     font-size: 40px;
+      text-shadow: 8px 8px 8px rgb(16, 17, 17);
+      animation-duration: 5s;
+      animation-name: slidein;
+      font-style: italic;
+     
+  }
+  
+  h2{
+    color:#ff00ff ;
+    text-align: center;
+      font-size: 40px;
+      text-shadow: 8px 8px 8px rgb(19, 20, 20);
+     font-style: italic;
+  }
+
+  
+  p{
+    line-height: 2.0;
+      text-align: justify;
+      text-decoration-color: #e1e3ec;
+      color: aliceblue;
+    
+  }
+  
+  section#inicio{
+     display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      text-align: center;
+      background-color: #5013c063;
+      padding: 30px;
+      
+  }
+  
+  .logo{
+    width: 15%;
+      max-width: 15%;
+      border-radius: 50%;
+  }
+  
+  #menu{
+    display: flex;
+    flex-direction: row;
+    list-style: none;
+  }
+
+  ul#btnContactos {
+    display: flex;
+    list-style: none;
+    justify-content: center;
+  }
+  
+  #btnContactos svg {
+    list-style: none;
+    width: 150px;
+    height: 150px;
+    margin: 0 10px;
+  }
+   /* Estilos para el pop up */
+
+.popup {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.popup-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.popup-content h2 {
+  margin-top: 0;
+}
+
+#btnCerrar {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+}
+
+#btnCerrar i {
+  font-size: 1.5rem;
+}
+
+/* Estilos adicionales para hacer el campo de entrada más bonito */
+
+.input-container {
+  text-align: center;
+}
+
+input[type="email"] {
+  width: 90%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.subscribe-btn-container {
+  text-align: center;
+}
+
+button[type="submit"] {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.close-icon {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+}
+.close-icon i {
+  color: #333;
+}
+
+.close-icon:hover i {
+  color: #ff0000; /* Cambia el color al pasar el ratón sobre el botón de cierre */
+}
+
+  
+  footer {
+    background-color: rgb(61, 43, 226);
+  }
+  
+  a{
+    text-decoration: none;
+    color: inherit;
+  }
+
+  main{
+     max-width: 1200px;
+      margin: auto;
+  }
+  .fotoPerfil {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border-style: solid;
+   
+  }
+  
+  #inicio{
+     background-color: rgb(233, 218, 236);
+      margin-bottom: 5rem;
+  }
+  
+  #contacto{
+    background-color: #5013c063;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 30px;
+      text-align: center;
+  }
+  
+  .nav-list{
+    
+     display: flex;
+      flex-direction: row;
+      justify-content: end;
+      text-align-last: left;
+      padding: 1rem;
+      gap: 1rem;
+    
+  }
+
+ .abrir-menu 
+ .cerrar-menu{
+  display: none;
+ }
+ 
+ 
+
+ @media screen and (max-width:550px) {
+  .abrir-menu 
+  .cerrar-menu{
+    display: block;
+  }
+  .nav {
+    opacity: 0;
+    visibility: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    padding: 1rem;
+    box-shadow: 0 0 0 100 vmax rgba(0, 0, 0, 0.5);
+    background-color:#5013c063 ;
+  
+  }
+  .nav.visible {
+    opacity: 1;
+    visibility: visible;
+  }
+  .nav-list {
+    flex-direction: column;
+    align-items: end;
+    
+  }
+ 
+ }
+  a.btn {
+     background-color: rgb(2, 3, 12);
+      color: rgb(149, 100, 194);
+      padding: 12px.20px;
+      border-radius: 20px;
+      font-size: 20px;
+      display: inline-block;
+      display: inline;
+      color: #e1e3ec;
+  }
+  
+  
+  hr{
+     box-shadow: 0.3px.10px.5px;
+    background-color: rgb(33, 12, 155);
+  }
+  
+  .menu-item{
+     font-size: 14px;
+      margin: 2px;
+  
+  }
+  
+  #btnInicio, #btnContacto, #btnSubscribirse{
+  border: 0;
+  background-image:linear-gradient(150deg, rgb(255, 0, 200), rgb(31, 31, 194), rgb(0, 128, 96));
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  font-size: 20px;
+  padding: 4px;
+  cursor: pointer;
+  transition: .3s;
+  
+  }
+  
+  #btnCv{
+    display: flex;
+   justify-content: space-around;  
+  border: 0;
+  background-image:linear-gradient(150deg, rgb(255, 0, 200), rgb(31, 31, 194), rgb(0, 128, 96));
+   border-radius: 8px;
+   color: white;
+   font-size: 20px;
+   padding: 8px;
+   cursor: pointer;
+   transition: .3s;
+  }
+  
+  span#btncv{
+    padding: 26px 34px;
+  }
+  div#titulos {
+    display: flex;
+    justify-content: space-between;
+  }
+  ul#fotosTrabajo {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+  }
+img.imgTrabajo {
+  width: 150px;
+  height: 150px;
+}
+
+  button span{
+    background-color: black;
+      padding: 16px 24px;
+      border-radius: 6px;
+      transition: .3s;
+      }
+
+      button:hover span {
+        background: none;
+      }
+      
+    
+  @keyframes slidein {
+     from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%; 
+         
+        }
+  }
+  
+  
+      @keyframes slidein {
+      from {
+        margin-left: 100%;
+        width: 300%;
+      }
+    
+      to {
+        margin-left: 0%;
+        width: 100%; 
+         
+        }
+    }
+  
+    .perfilInstagram p{
+       color: white;
+     font-size: 30px;
+     font-weight: bold;
+     font-family: Arial, Helvetica, sans-serif;
+  text-align: center;
+    }
+  
+    @media (min-width: 1024px) {
+      section#inicio {
+          flex-direction: row;
+          
+      }
+      article.presentacion {
+          text-align: center;
+          width: 50%;
+          padding: 20%;
+      }
+      h1 {
+          font-size: 50px;
+          text-align: center;
+      }
+      p{
+          padding: 5%;
+      }
+      button#Cv {
+          align-items: center;
+      }
+      
+      ul.metodos {
+        display: flex;
+        justify-content: space-between;
+      
+      }
+      
+  }
+  img.imagenMuestra{
+    width: 100%;
+    height: 100%;
+   
+     }
+     .metodo{
+      text-align: center;
+      color: #ff00ff;
+      animation-duration: 5s;
+      animation-name: slidein;
+      font-style: italic;
+      font-size: 50px;
+     }
+img.imgTrabajo{
+width: 200px;
+height: 150px;
+transition: 0.5s;
+object-fit: cover;
+}
+.imgTrabajo:hover{
+transform: scale(1.2)
+}
+.metodos {
+  font-family: 'Times New Roman', Times, serif;
+  color: #ff00ff;
+}
