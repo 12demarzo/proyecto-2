@@ -28,7 +28,8 @@ body{
 body.dark {
 background-color: black;
 color: white;
-background-image: url(./img/fondo2.jpg);
+background-image: 
+url(../img/fondo-proyecto.jpg);
 }
 
   
